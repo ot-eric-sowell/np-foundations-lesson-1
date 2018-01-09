@@ -2,14 +2,13 @@ const express = require('express')
 
 const app = express()
 
-
 app.get('/', (req, res) => {
-    console.log('Somebody came to the root.')
-    res.send('You have reached the root of the express site.')
+    console.log('Someone hit the root.')
+    res.send('Hello from Node and Express')
 })
 
-const port = process.env.PORT
+const port = process.env.PORT || 7000
 
 app.listen(port, () => {
-    console.log(`Listening on port ${port}.`)
+    console.log(`Listening on port ${port}`)
 })
